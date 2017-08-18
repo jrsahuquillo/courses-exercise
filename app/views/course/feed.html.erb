@@ -1,0 +1,14 @@
+<h1>Courses</h1>
+
+<h3>On Going Courses</h3>
+<% @on_going_courses.each do |course| %>
+  <li><%= course.name + ' - Price: ' + course.price.to_s + ' €' + ' - Started on: ' + course.start_date.strftime("%d-%m-%Y").to_s + ' - Ends on: ' + course.end_date.strftime("%d-%m-%Y").to_s %></li>
+<% end %>
+<h3>Next Courses</h3>
+<% @next_courses.each do |course| %>
+  <li><%= course.name + ' - Price: ' + course.price.to_s + ' €' + ' - Starts on: ' + course.start_date.strftime("%d-%m-%Y").to_s + ' - Ends on: ' + course.end_date.strftime("%d-%m-%Y").to_s%></li>
+<% end %>
+<h3>Ended Courses</h3>
+<% @ended_courses.each do |course| %>
+  <li><%= course.name + ' - Price: ' + course.price.to_s + ' - Started on: ' + course.start_date.strftime("%d-%m-%Y").to_s + ' €'  ' - Ended on: ' + course.end_date.strftime("%d-%m-%Y").to_s %></li>
+<% end %>
